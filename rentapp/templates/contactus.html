@@ -1,0 +1,132 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+<style>
+    .div0 {
+        width: 100%;
+        height: 300px;
+        color: white;
+        /* margin-top: 5%; */
+        background-color: cornflowerblue;
+        align-items: center;
+    }
+
+    .divm {
+        padding-top: 90px;
+        /* margin-right: 43%; */
+        /* margin-top: 20%; */
+        /* float:right; */
+
+    }
+
+    .div01 {
+        width: 100%;
+        height: 600px;
+        margin-left: 10%;
+        margin-top: 3%;
+
+    }
+
+    .div02 {
+        width: 100%;
+    }
+
+    /* .div03{
+       float: right;
+       margin-right: 30%;
+       margin-bottom: 8%;
+   } */
+    .img0 {
+        width: 92%;
+        height: 52%;
+    }
+    /* .cform{
+        padding-right: 300px;
+    }
+    .cformh{
+        padding-right: 285px;
+    }
+    .formdtls{
+        width: 100%;
+    } */
+    .controls{
+        width: 50%;
+    }
+</style>
+<div class="div0 my-auto">
+    <div class="divm text-center">
+        <h5>e-Rental</h5>
+        <h1>CONTACT US</h1>
+    </div>
+</div>
+<div class="row  p-5 mx-auto div01 ">
+
+    <div class="col-lg-6">
+        <h2>Our Location</h2>
+        <div class="div02">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.571715616075!2d75.96434491607958!3d11.145240655322175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64f1e2ae70b03%3A0xab193be8e11b4f15!2sKm%20Offest%20Printers!5e0!3m2!1sen!2sin!4v1642482832308!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+    </div>
+    <div class="col-lg-6 div03">
+        <h3>About our Office</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis totam
+            at voluptatem sunt deleniti nam? Repudiandae et esse voluptate voluptatum
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis totam
+            at voluptatem sunt deleniti nam? Repudiandae et esse voluptate voluptatum
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis totam
+            at voluptatem sunt deleniti nam? Repudiandae et esse voluptate voluptatum </p>
+        <img src="{% static 'images/office.jpg' %}" class="img0" alt="">
+    </div>
+</div>
+
+<div class="cform">
+    <div class="container"> <div class=" text-center mt-5 ">
+        <h1 class="cformh">Send us a message</h1>
+    </div>
+    <div class="row ">
+        <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+                <div class="card-body bg-light">
+                    <div class="container">
+                        <form id="contact-form" role="form">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_name">Firstname *</label> <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required."> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_lastname">Lastname *</label> <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required."> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_email">Email *</label> <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required."> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_need">Please specify your need *</label> <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                                <option value="" selected disabled>--Select Your Issue--</option>
+                                                <option>Request Invoice for order</option>
+                                                <option>Request order status</option>
+                                                <option>Other</option>
+                                            </select> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group"> <label for="form_message">Message *</label> <textarea id="form_message" name="message" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                                    </div>
+                                    <div class="col-md-12"> <input type="submit" class="btn btn-primary btn-send pt-2 btn-block " value="Send Message"> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- /.8 -->
+        </div> <!-- /.row-->
+    </div>
+</div>
+</div>
+{% endblock %}  

@@ -1,0 +1,50 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<div class="row  p-5 mx-auto">
+    <div class="col-lg-4">
+      <div class="card card2" style="width: 18rem; height: 100%;">
+        <img class="card-img-top" src="{% static 'images/automatic car.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">AUTOMATIC CAR</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="autcar" class="btn btn-primary">BOOK NOW</a>
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="col-lg-4">
+      <div class="card card2" style="width: 18rem;  height: 100%; ">
+        <img class="card-img-top" src="{% static 'images/manual car.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">MANUAL CAR</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="mancar" class="btn btn-primary">BOOK NOW</a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-lg-4">
+      <div class="card card2" style="width: 18rem;  height: 100%; ">
+        <img class="card-img-top" src="{% static 'images/wedding car.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">WEDDING CAR</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="wedcar" class="btn btn-primary">BOOK NOW</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

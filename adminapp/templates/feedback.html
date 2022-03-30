@@ -1,0 +1,98 @@
+{% extends 'master1.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .checked {
+      color: orange;
+    }
+    </style>
+<div class="container">
+    <div class="row header" style="text-align:center;color:green">
+        <h3>Payment Reports</h3>
+    </div>
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th> ID</th>
+                <th>Customer Name</th>
+                <th>Feedback</th>
+                <th>Ratings </th>
+                <th>Date </th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>vivek</td>
+                <td>good service</td>
+                <td> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </span></td>
+                <td>05/03/2022</td>
+                
+
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>sree hari</td>
+                <td>good service</td>
+                <td> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span></td>
+                <td>05/03/2022</td>
+
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>firas</td>
+                <td>good service</td>
+                <td> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span></td>
+                <td>05/03/2022</td>
+
+            </tr>
+
+            <tr>
+                <td>101</td>
+                <td>rasal</td>
+                <td>good service</td>
+                <td> <span class="fa fa-star checked"></span></span>
+                    <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span></td>
+                <td>05/03/2022</td>
+
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>harshin</td>
+                <td>good service</td>
+                <td> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span></td>
+                <td>05/03/2022</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+   
+</div>
+
+{% endblock %}

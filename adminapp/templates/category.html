@@ -1,0 +1,124 @@
+{% extends 'master1.html' %}
+{% block content %}
+{% load static %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive project-list">
+                        <table class="table project-table table-centered table-nowrap">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> ID</th>
+                                    <th scope="col"> Name</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Photo</th>
+                                    <th scope="col">Action</th>
+                                    
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">101</th>
+                                    <td>SUV</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eius quaerat temporibus illum repellat quos sint ratione exercitationem mollitia. Sed dicta quam soluta facere aspernatur ex corporis, culpa officiis tenetur.</td>
+                                    <td><img src="{% static 'images/profile.png' %}" alt="" style="height: 50px;width: 50px;" ><br>&nbsp;  rasal</td>
+
+                                    <td>
+                                        <div class="action">
+                                            <a href="#" class="text-success mr-4" data-toggle="tooltip"
+                                                data-placement="top" title="" data-original-title="Edit"> <i
+                                                    class="fa fa-pencil h5 m-0"></i></a>
+                                            <a href="#" class="text-danger" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Close"> <i
+                                                    class="fa fa-remove h5 m-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">101</th>
+                                    <td>SUV</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eius quaerat temporibus illum repellat quos sint ratione exercitationem mollitia. Sed dicta quam soluta facere aspernatur ex corporis, culpa officiis tenetur.</td>
+                                    <td><img src="{% static 'images/profile.png' %}" alt="" style="height: 50px;width: 50px;" ><br>&nbsp;  rasal</td>
+
+                                    <td>
+                                        <div class="action">
+                                            <a href="#" class="text-success mr-4" data-toggle="tooltip"
+                                                data-placement="top" title="" data-original-title="Edit"> <i
+                                                    class="fa fa-pencil h5 m-0"></i></a>
+                                            <a href="#" class="text-danger" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Close"> <i
+                                                    class="fa fa-remove h5 m-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">101</th>
+                                    <td>SUV</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eius quaerat temporibus illum repellat quos sint ratione exercitationem mollitia. Sed dicta quam soluta facere aspernatur ex corporis, culpa officiis tenetur.</td>
+                                    <td><img src="{% static 'images/profile.png' %}" alt="" style="height: 50px;width: 50px;" ><br>&nbsp;  rasal</td>
+
+                                    <td>
+                                        <div class="action">
+                                            <a href="#" class="text-success mr-4" data-toggle="tooltip"
+                                                data-placement="top" title="" data-original-title="Edit"> <i
+                                                    class="fa fa-pencil h5 m-0"></i></a>
+                                            <a href="#" class="text-danger" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Close"> <i
+                                                    class="fa fa-remove h5 m-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end project-list -->
+
+                    <!-- <div class="pt-3">
+                        <a href="register" type="inputbutton" class="btn btn-outline-primary my-2 my-sm-0">Add Driver</a>
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </div> -->
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end row -->
+</div>
+<label for="cat" >Category Name</label><br>
+<input type="text" name="" id="cat" style="width: 250px;"><br>
+
+<label for="">Description</label><br>
+<textarea style="width: 250px;"></textarea ><br>
+
+<label for="">Photo</label><br>
+<input type="file" class="file-uploader pull-left"> <br>
+
+<button>Save Category</button>
+
+
+{% endblock %}

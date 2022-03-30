@@ -1,0 +1,751 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --font1: 'Heebo', sans-serif;
+    --font2: 'Fira Sans Extra Condensed', sans-serif;
+    --font3: 'Roboto', sans-serif
+}
+
+body {
+    font-family: var(--font3);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)
+}
+
+h2 {
+    font-weight: 900
+}
+
+.container-fluid {
+    max-width: 1200px
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    border: 0;
+    border-radius: 1rem
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem - 1px)
+}
+
+.card h5 {
+    overflow: hidden;
+    height: 56px;
+    font-weight: 900;
+    font-size: 1rem
+}
+
+.card-img-top {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    padding: 30px
+}
+
+.card h2 {
+    font-size: 1rem
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
+}
+
+.label-top {
+    position: absolute;
+    background-color: #8bc34a;
+    color: #fff;
+    top: 8px;
+    right: 8px;
+    padding: 5px 10px 5px 10px;
+    font-size: .7rem;
+    font-weight: 600;
+    border-radius: 3px;
+    text-transform: uppercase
+}
+
+.top-right {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 900;
+    background: #ff5722;
+    line-height: 90px;
+    text-align: center;
+    color: white
+}
+
+.top-right span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        max-height: 250px
+    }
+}
+
+.over-bg {
+    background: rgba(53, 53, 53, 0.85);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+    border-radius: 10px
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 50px 5px 50px
+}
+
+.box .btn {
+    font-size: 1.5rem
+}
+
+@media (max-width: 1025px) {
+    .btn {
+        padding: 5px 40px 5px 40px
+    }
+}
+
+@media (max-width: 250px) {
+    .btn {
+        padding: 5px 30px 5px 30px
+    }
+}
+
+.btn-warning {
+    background: none #f7810a;
+    color: #ffffff;
+    fill: #ffffff;
+    border: none;
+    text-decoration: none;
+    outline: 0;
+    box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25);
+    border-radius: 100px
+}
+
+.btn-warning:hover {
+    background: none #ff962b;
+    color: #ffffff;
+    box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35)
+}
+
+.bg-success {
+    font-size: 1rem;
+    background-color: #f7810a !important
+}
+
+.bg-danger {
+    font-size: 1rem
+}
+
+.price-hp {
+    font-size: 1rem;
+    font-weight: 600;
+    color: darkgray
+}
+
+.amz-hp {
+    font-size: .7rem;
+    font-weight: 600;
+    color: darkgray
+}
+
+.fa-question-circle:before {
+    color: darkgray
+}
+
+.fa-plus:before {
+    color: darkgray
+}
+
+.box {
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12)
+}
+
+.box-img {
+    max-width: 300px
+}
+
+.thumb-sec {
+    max-width: 300px
+}
+
+@media (max-width: 576px) {
+    .box-img {
+        max-width: 200px
+    }
+
+    .thumb-sec {
+        max-width: 200px
+    }
+}
+
+.inner-gallery {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 1px;
+    display: inline-block;
+    overflow: hidden;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+@media (max-width: 370px) {
+    .box .btn {
+        padding: 5px 40px 5px 40px;
+        font-size: 1rem
+    }
+}
+
+.disclaimer {
+    font-size: .9rem;
+    color: darkgray
+}
+
+.related h3 {
+    font-weight: 900
+}
+
+footer {
+    background: #212529;
+    height: 80px;
+    color: #fff
+}
+
+
+
+
+html,
+body {
+    height: 100%
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+body {
+    background-color: #daecec;
+    display: grid;
+    place-items: center
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px
+}
+
+p {
+    color: #b7b1b1;
+    font-weight: 500
+}
+
+.discBtn {
+    background-color: #21afa7;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500
+}
+
+.fa-heart {
+    color: #f05c5d
+}
+
+.fa-balance-scale {
+    color: #968888
+}
+
+.fa-arrows {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg)
+}
+
+.buy {
+    border-radius: 20px;
+    background-color: #e8f6f6;
+    color: #2bc4ba
+}
+
+.cart {
+    background-color: #2bc4ba;
+    border-radius: 30px;
+    position: relative;
+    right: 35px
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none
+}
+
+*:focus {
+    outline: none
+}
+
+
+.cardimg{
+    width: 18rem;
+}
+
+
+
+</style>
+<script>
+$(document).ready(function(){
+    $('.input-daterange').datepicker({
+    format: 'dd-mm-yyyy',
+    todayHighlight: true,
+    startDate: '0d'
+    })
+})
+</script>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{% static 'images/Acar5.jpeg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Maruti suzuki Swift</h5>
+      
+      <p class="">Petrol</p> 
+      <p class="">Manual</p>
+      <p class="text-muted">4 seater</p>
+      <p class="card-text"></p>
+    
+
+
+    </div>
+    <!-- <ul class="list-group list-group-flush" style="color: red;">
+      <li class="list-group-item">10DAYS - 1000/perday</li>
+      <li class="list-group-item">20DAYS - 850/perday</li>
+      <li class="list-group-item">30DAYS - 700/perday</li>
+    </ul> -->
+    <div class="card-body">
+      <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal2" type="submit">BOOK NOW</a>
+      <!-- <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top cardimg" src="{% static 'images/Acar5.jpeg'' %}"alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Maruti Suzuki Swift</h5>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Petrol</li>
+      <li class="list-group-item">Manual</li>
+      <li class="list-group-item">Hatchback</li>
+      <li class="list-group-item">5 seater</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">BOOK NOW</a>
+      <!-- <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+            <div class="card pl-4 pr-3 py-2">
+                <div class="div1 row py-4 px-2">
+                    <div class="col-3 mt-2"> <button class="btn discBtn text-white p-1 p-md-2">-25%</button> </div>
+                    <div class="col-6 d-flex justify-content-center"> <img src="{% static 'images/aut1.jpg' %}" height="" width="150%" alt=""> </div>
+                    <div class="col-3 d-flex flex-column pl-4"> <i class="" aria-hidden="true"></i> <i class="" aria-hidden="true"></i> </div>
+                </div>
+                <div class="py-2">
+                    <p class="ml-3 ml-md-5"> <i class="fa fa-flash" aria-hidden="true"></i> <span class="small"></span> <i class="fa fa-list" aria-hidden="true"></i> <span class="small"></span> </p>
+                    <h5>Maruti Suzuki Swift</h5>
+                    <p> Petrol, Manual </p>
+                    <div class="d-flex">
+                        <h5 class="align-self-center">Rent 29 999</h5> <button class="btn btn-success"> Book Now</button> <span class=" " aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main>
+    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div class="col">
+                <div class="card h-100 shadow-sm"> <img src="{% static 'images/aut1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">petrol</span> <span class="float-end price-hp">12354.00€</span> </div>
+                        <h5 class="card-title">Maruti suzuki Swift</h5>
+                        <span class="float-end price-hp">Rs.1299</span>
+                        <div class="text-center my-4"> <a href="#" class="btn btn-warning">BOOK NOW</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm"> <img src="{% static 'images/aut2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="clearfix mb-3"><span class="float-start badge rounded-pill bg-success">12354.00€</span> <span class="float-end"><a href="#">Example</a></span> </div>
+                        <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                        <div class="d-grid gap-2 my-4"> <a href="#" class="btn btn-warning">Check offer</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm"> <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
+                    <div class="label-top shadow-sm">Asus Rog</div>
+                    <div class="card-body">
+                        <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">12354.00€</span> <span class="float-end"><a href="#" class="small text-muted">Reviews</a></span> </div>
+                        <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                        <div class="text-center my-4"> <a href="#" class="btn btn-warning">Check offer</a> </div>
+                        <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm"> <img src="https://www.freepnglogos.com/uploads/notebook-png/notebook-laptop-png-images-you-can-download-mashtrelo-14.png" class="card-img-top" alt="...">
+                    <div class="label-top shadow-sm">DELL</div>
+                    <div class="card-body">
+                        <div class="clearfix mb-3"> <span class="float-start price-hp">12354.00€</span> <span class="float-end"><a class="text-muted small" href="#">Reviews</a></span> </div>
+                        <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                        <div class="text-center my-4"> <a href="#" class="btn btn-warning">Check offer</a> </div>
+                        <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+<div class="container px-1 px-sm-5 mx-auto ">
+    <form autocomplete="off">
+        <div class="flex-sm-row flex-column d-flex">
+            <div class="col-sm-9 col-12 px-0 mb-2">
+                <div class="input-group input-daterange"> 
+                    <h5>Pickup</h5>
+                     <input type="text" class="form-control" placeholder="Pickup " name="pickup" readonly><br>
+                     <h5>Dropoff</h5>
+                     <input type="text" class="form-control" placeholder="Dropoff " readonly> </div>
+            </div>
+            <div class="col-sm-3 col-12 px-0"> <button type="submit" class="btn btn-success">Search</button> </div>
+        </div>
+    </form>
+</div>
+
+
+
+    <div>
+        <img class="H-img"  src="{% static 'images/H-img2.jpg' %}" alt="" >
+    </div>
+   
+
+
+    <div class="container">
+    <div class="" style="background-image: image(url('H-img03.jpg'));">
+    <div class="" style="border: 1px; ">
+    <h1 style="color: darkblue;">BOOK YOUR CAR NOW</h1>
+    <h2 style="color: darkblue;">Search Your Vehicle</h2>
+    <h5 style="color: darkblue;">Pick up</h5>
+    <input type="date"><input type="time">
+    <h5 style="color: darkblue;">Drop off</h5>
+    <input type="date"><input type="time"><br><br>
+    <button class="btn2">Search</button>
+
+    </div>
+</div>
+</div>
+
+<div class="padding">
+    <div class="row container d-flex justify-content-center">
+        <div class="col-lg-12 col-xl-6">
+            <!-- Draggable Without Images card start -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Draggable Grid with cards</h5>
+                </div>
+                <div class="card-block">
+                    <div class="row" id="sortable">
+                        <div class="col-md-6 m-b-20" draggable="false" style="">
+                            <div class="card-sub"> <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557925704/doruk-yemenici-1593970-unsplash.jpg" alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="card-title">Product 1</h4>
+                                    <p class="card-text">That might be little bit risky to have crew member like them.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-sub m-b-20"> <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557925739/marek-levak-1591308-unsplash.jpg" alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="card-title">Product 2</h4>
+                                    <p class="card-text">That might be little bit risky to have crew member like them.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="">
+                            <div class="card-sub"> <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557925652/tomas-robertson-1594346-unsplash.jpg" alt="Card image cap" draggable="false">
+                                <div class="card-block">
+                                    <h4 class="card-title">Product 3</h4>
+                                    <p class="card-text">That might be little bit risky to have crew member like them.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 m-b-20" draggable="false" style="">
+                            <div class="card-sub"> <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557925704/doruk-yemenici-1593970-unsplash.jpg" alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="card-title">Product 4</h4>
+                                    <p class="card-text">That might be little bit risky to have crew member like them.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="" draggable="false">
+                            <div class="card-sub m-b-20">
+                                <div class="card-block"> <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557925606/chen-feng-1594580-unsplash.jpg" alt="Card image cap">
+                                    <h4 class="card-title">Product 5</h4>
+                                    <p class="card-text">That might be little bit risky to have crew member like them.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-sub m-t-20">
+                                <div class="card-block"> <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557925652/tomas-robertson-1594346-unsplash.jpg" alt="Card image cap" draggable="false">
+                                    <h4 class="card-title">Product 6</h4>
+                                    <p class="card-text">That might be little bit risky to have crew member like them.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Draggable Without Images card end -->
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<div class="content-wrapper mx-auto">
+    <img src="{% static 'images/bgimg.jpg' %}" class="img-fluid2" alt="Responsive image"
+    style=" opacity: 50%; height: 800px; width: 100%;  ">
+    <div class="text-wrapper mx-auto " style="margin-top: -25%;">
+      <h1 style="color: darkblue;">BOOK YOUR CAR NOW</h1>
+      <h2 style="color: darkblue;">Search Your Vehicle</h2>
+      <h5 style="color: darkblue;">Pick up</h5>
+      <input type="date"><input type="time">
+      <h5 style="color: darkblue;">Drop off</h5>
+      <input type="date"><input type="time"><br><br>
+      <button class="btn2">Search</button>
+  
+    </div>
+  </div>
+{% endblock %}
+  <!-- Footer -->
+  <footer class="footer footer1 text-center text-lg-start  text-muted"
+    style="background-color: rgb(3, 18, 68);
+    color: rgb(255, 255, 255);">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span style="color:white;">Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div style="color:white;">
+        <a href="" class="me-4 text-reset mr-3">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset mr-3">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset mr-3">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset mr-3">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset mr-3">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset mr-3">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: white" ;>
+              <i class="fas fa-gem me-3" style="color: white"></i>e-rent
+            </h6>
+            <p style="color: white">
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" style="color: white">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" style="color: white">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">ABOUT US</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">MANUAL CARS</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">WEDDING CARS</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">AUTOMATIC CARS</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="color: white">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);" style="color: white">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" -->
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->

@@ -1,0 +1,273 @@
+/* .nav-home:hover{
+ color: blue;
+ background-color: rgb(240, 0, 0);
+} */
+/* .nav-item active:hover{
+ height: 50px;
+ background-color: crimson;
+ 
+} */
+
+/* .navbar1{
+    background-color: yellow;
+    
+}
+.text-muted {
+    color: #ffffff!important;
+    
+
+}
+.footer{
+    background-color: #000000!important;
+}
+.navbar1 {
+    background-color: rgb(9, 10, 85);
+    color: white;
+  }
+  .navbar1 .navbar-brand{
+    color: white;
+  }
+
+  .navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%);
+  }
+
+  .navbar {
+    color: white;
+    background-color: #090a55 !important;
+  }
+  .navbar .nav-link{
+    color: white;
+  }
+  .rgstrlogin{
+    border-color: rgb(0, 255, 13);
+  } */
+
+
+.navbar{
+  background-color: rgb(3, 18, 68);
+  padding: 0 10px 0 10px;
+}
+.navbar .navbar-brand{
+    font-size: 40px;
+    color:yellow;
+    font-weight: bold;
+}
+.navbar .nav-link{
+    color: rgb(255, 255, 255);
+}
+.navbar button{
+    margin-left: 20px;
+}
+.image img {
+    width: 750px;
+    height: 750px;
+    
+   
+      }
+    
+      .col-sm-12 {
+        width: 100%;
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    
+      .text-wrapper {
+        padding-top: 5%;
+        /* background-color: rgb(249, 252, 62); */
+        color: black;
+        width: 29%;
+        height: 300px;
+        position: relative;
+        margin-top: -25%;
+        margin-left: 35%;
+        border-radius: 20px;
+        text-align: center;
+    
+      }
+    
+      .btn2 {
+        background-color: rgb(25, 124, 38);
+        color: white;
+        margin-left: 0px;
+        align-content: center;
+      }
+    
+      .btn2:hover {
+        background-color: rgb(31, 17, 151);
+        color: white;
+      }
+    
+      .content-wrapper {
+        width: 80%;
+        margin: 0% 10% 5% 10%;
+      }
+    
+      .content-wrapper img {
+        width: 100%;
+    
+      }
+    
+      .card2 {
+        border: 2px solid rgb(31, 17, 151);
+    
+      }
+    
+      /* body {
+        
+        );
+      } */
+  
+
+  .col-sm-12 {
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .text-wrapper {
+    padding-top: 4%;
+    /* background-color: rgb(167, 165, 235); */
+    color: black;
+    width: 29%;
+    height: 300px;
+    position: relative;
+    margin-top: -25%;
+    margin-left: 35%;
+    border-radius: 20px;
+    text-align: center;
+
+  }
+
+  .btn2 {
+    background-color: rgb(25, 124, 38);
+    color: white;
+    margin-left: 0px;
+    align-content: center;
+  }
+
+  .btn2:hover {
+    background-color: rgb(31, 17, 151);
+    color: white;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    margin:5;
+  }
+
+  .content-wrapper img {
+    width: 100%;
+
+  }
+
+  .card2 {
+    border: 2px solid rgb(31, 17, 151);
+
+  }
+.div0{
+    width: 100%;
+    height: 300px;
+    color: white;
+    /* margin-top: 5%; */
+    background-color: cornflowerblue;
+    align-items: center;
+}
+.divm{
+    padding-top:100px ;
+    /* margin-right: 43%; */
+    /* margin-top: 20%; */
+    /* float:right; */
+
+   }
+.div01{
+    width: 100%;
+    height: 600px;
+    margin-left: 10%;
+    margin-top: 3%;
+
+}
+.div02{
+   width: 100%;
+}
+/* .div03{
+   float: right;
+   margin-right: 30%;
+   margin-bottom: 8%;
+} */
+.img0{
+width: 92%;
+height: 52%;
+}
+.dls{
+  margin-top: 5;
+}
+/* .linediv{
+  height: 50px;
+  width: 80%;
+  color: red;
+  background-color: blue;
+} */
+
+.para1{
+  text-align: center;
+  color:navy;
+  margin-top: 40px;
+  
+
+  /* padding-left: 200px; */
+}
+.container2{
+  padding: 0 7%;
+}
+.img5 {
+  padding-left:0px;
+  padding-top: 0px;
+  /* padding-bottom: 200px; */
+}
+.crsl{
+  margin: 50px 0 50px 0;
+  background-color: black;
+}
+.desc{
+  padding-top: 10%;
+}
+.BGIMG{
+  width: 100%;
+  height: 500px;
+}
+
+
+.hdname{
+  background-color: skyblue;
+  
+  width: 100%;
+  
+}
+
+
+
+/* .content-wrapper2{
+  width: 100%;
+  margin:5;
+  height: 250px;
+  /* padding: 55%; */
+/* }
+
+.text-wrapper2{
+  padding: 5%;
+  /* padding-top: 4%; */
+    /* background-color: rgb(167, 165, 235); */
+    /* color: black;
+    width: 29%;
+    height: 300px;
+    position: relative;
+    margin-top: -25%;
+    margin-left: 35%;
+    border-radius: 20px;
+    text-align: center;
+} */ 

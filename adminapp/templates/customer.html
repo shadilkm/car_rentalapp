@@ -1,0 +1,78 @@
+{% extends 'master1.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<div class="container">
+    <div class="row header" style="text-align:center;color:green">
+        <h3>Customers</h3>
+    </div>
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>User id</th>
+                <th> User Name</th>
+                <th>Gender</th>
+                <th>Contact no.</th>
+                <th>Address</th>
+                <th>Password</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>vivekji@gmail.com</td>
+                <td>Vivek K </td>
+                <td>Male</td>
+                <td>9888225544</td>
+                <td>vivek H Kondotty(PO) </td>
+                <td>vivek123</td>
+
+            </tr>
+
+            <tr>
+                <td>chirakkal@gmail.com</td>
+                <td>Sreehari TP </td>
+                <td>Male</td>
+                <td>8444889990</td>
+                <td>vivek H Kondotty(PO) </td>
+                <td>sreehari123</td>
+
+            </tr>
+
+            <tr>
+                
+                <td>rassalkt@gmail.com</td>
+                <td>Rasal KT</td>
+                <td>Male</td>
+                <td>8884449990</td>
+                <td>rassal H karippur(PO) </td>
+                <td>rasal123</td>
+                
+            </tr>
+
+            <tr>
+                
+                <td>harshinkk@gmail.com</td>
+                <td>Harshin</td>
+                <td>Male</td>
+                <td>9898877551</td>
+                <td>arshu H karippur(PO) </td>
+                <td>harshin321</td>
+            </tr>
+            <tr>
+                <td>firas@gmail.com</td>
+                <td>Firas</td>
+                <td>Male</td>
+                <td>8884449990</td>
+                <td>firas H vazhakkad (PO)</td>
+                <td>firas321</td>
+                
+                
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+{% endblock %}
